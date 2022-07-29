@@ -19,6 +19,8 @@ export default function Routes() {
         <Route exact path="/perfis">
           <Profiles />
         </Route>
+
+
       </Switch>
     </div >
   );

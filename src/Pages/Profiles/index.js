@@ -63,7 +63,7 @@ export default function Profiles() {
       </div>
       <div>
         {
-          currentProfile?.contatos.map(contact => (
+          /*currentProfile?.contatos.map(contact => (
             <div className="card">
               <h3>
                 {contact.nome}
@@ -72,7 +72,7 @@ export default function Profiles() {
                 {contact.email}
               </span>
             </div>
-          ))}
+          )) */}
       </div>
     </div>
   );

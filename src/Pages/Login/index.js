@@ -21,7 +21,7 @@ export default function Login() {
       .then(resp => {
         login(resp.data.token);
         console.log(resp);
-        history.push("/profiles");
+        history.push("/perfis/");
       })
       .catch(error => console.error(error));
   }
