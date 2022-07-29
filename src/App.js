@@ -15,7 +15,10 @@ function App() {
         <nav>
           <ul>
             <li>
-              <NavLink to="/">Home</NavLink>
+              <NavLink to="/">Login</NavLink>
+            </li>
+            <li>
+              <NavLink to="/registro">Registrar</NavLink>
             </li>
             <li>
               <button onClick={handleLogout}>Logout</button>
