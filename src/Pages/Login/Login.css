@@ -1,0 +1,55 @@
+.form {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  width: 70%;
+  margin: auto;
+}
+
+.form form {
+  width: 50%;
+  margin: auto;
+}
+
+.form input {
+  display: block;
+  height: 2.5rem;
+  width: 100%;
+  margin-top: 0.5rem;
+  border: 1.5px solid lightgray;
+  border-radius: 5px;
+  transition: box-shadow 250ms cubic-bezier(0.08, 0.73, 0.43, 0.91);
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.form label {
+  margin-top: 1.5rem;
+  display: block;
+}
+
+.form input:focus {
+  outline: none;
+  box-shadow: 0 0 0 1px grey;
+}
+
+.form button {
+  display: block;
+  appearance: none;
+  border: none;
+  width: 100%;
+  margin-top: 2rem;
+  height: 2.5rem;
+  border-radius: 5px;
+  background-color: lightseagreen;
+  font-weight: 500;
+  color: white;
+  cursor: pointer;
+  transition: box-shadow 250ms ease-out;
+}
+
+.form button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px teal;
+}

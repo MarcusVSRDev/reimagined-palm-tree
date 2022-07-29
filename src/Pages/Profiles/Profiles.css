@@ -1,0 +1,100 @@
+.profiles {
+  width: 80%;
+  max-width: 75rem;
+  margin: auto;
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.profiles .invite {
+  flex-basis: 30em;
+  flex-shrink: 0;
+  margin-top: 3.5rem;
+}
+
+.profiles .invite .card {
+  display: flex;
+  align-items: center;
+  max-width: 25rem;
+  width: 80vw;
+  justify-content: space-between;
+  border: 1.5px solid lightgray;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  height: 4.5rem;
+}
+
+.profiles .invite .card h3 {
+  font-size: 1rem;
+}
+
+.profiles .invite .icon {
+  appearance: none;
+  border: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: lightseagreen;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: box-shadow 250ms ease-out;
+}
+
+.profiles .invite .icon:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px teal;
+}
+
+.invitations {
+  padding: 1rem;
+  background-color: rgba(32, 178, 170, 0.2);
+  width: 100%;
+  max-width: 25rem;
+  margin: auto;
+  margin-top: 3.5rem;
+  border-radius: 5px;
+}
+
+.invitations li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 4rem;
+  width: 100%;
+  border: 1px solid white;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.invitations button {
+  display: block;
+  height: 2rem;
+  appearance: none;
+  border: none;
+  border-radius: 5px;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  background-color: lightseagreen;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+  transition: box-shadow 250ms ease-out;
+}
+
+.invitations button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px teal;
+}
+
+.invitations h2 {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.invitations h3 {
+  font-size: 1rem;
+  font-weight: 400;
+}
