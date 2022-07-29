@@ -53,7 +53,7 @@ def aceitar(request, *args, **kwargs):
     perfil_logado = get_perfil_logado(request)
     try:
         convite = Convite.objects.filter(
-            conviado=perfil_logado).get(id=kwargs['convite_id'])
+            convidado=perfil_logado).get(id=kwargs['convite_id'])
     except:
         raise exceptions.NotFound(
             f'Não foi encontrado um convite com o ID informado.')

@@ -49,7 +49,7 @@ class PerfilSimplificadoSerializer(serializers.ModelSerializer):
     class Meta:
         model = Perfil
         field = ('id', 'nome', 'email', 'pode_convidar')
-        read_only_fields = ('id')
+        read_only_fields = ('id',)
 
     def get_pode_convidar(self, obj):
         user = self.context['request'].user
@@ -66,5 +66,5 @@ class ConviteSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Convite
-        fields = ('id', 'convidado', 'solicitante')
+        fields = ('id', 'solicitante', 'convidado')
         read_only_fields = ('id',)
