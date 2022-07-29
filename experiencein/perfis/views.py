@@ -5,15 +5,16 @@ from rest_framework import viewsets, response, status, exceptions
 from rest_framework.permissions import AllowAny
 from rest_framework.decorators import api_view, renderer_classes
 from rest_framework.renderers import JSONRenderer, BrowsableAPIRenderer
+from .serializers import PerfilSerializer, PerfilSimplificadoSerializer, ConviteSerializer
 
 
 class PerfilViewSet(viewsets.ModelViewSet):
     queryset = Perfil.objects.all()
-    serializers_class = None
+    serializers_class = PerfilSerializer
 
     def get_serializers_class(self):
         if self.request.method == 'GET':
-            return None
+            return PerfilSimplificadoSerializer
         return super().get_serializer_class()
 
     def get_permissions(self):
@@ -27,7 +28,7 @@ class PerfilViewSet(viewsets.ModelViewSet):
 def get_convites(request, *args, **kwargs):
     perfil_logado = get_perfil_logado(request)
     convites = Convite.objects.filter(convidado=perfil_logado)
-    serializer = None
+    serializer = ConviteSerializer(convites)
     return response.Response(serializer.data, status=status.HTTP_200_OK)
 
 
@@ -65,7 +66,7 @@ def aceitar(request, *args, **kwargs):
 @renderer_classes((JSONRenderer, BrowsableAPIRenderer))
 def get_meu_perfil(request, *args, **kwargs):
     perfil_logado = get_perfil_logado(request)
-    serializer = None
+    serializer = PerfilSerializer(perfil_logado)
     return response.Response(serializer.data, status=status.HTTP_200_OK)
 
 
