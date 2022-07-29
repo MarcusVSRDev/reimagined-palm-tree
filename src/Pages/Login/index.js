@@ -1,14 +1,29 @@
 import React, { useState } from "react";
 //import styles from "./Login.css";//
 import "./Login.css";
+import { api } from "../../Services/api";
+import { login } from "../../Services/utils"
+import { useHistory } from "react-router-dom";
 
 export default function Login() {
   const [username, setUsername] = useState();
   const [password, setPassword] = useState();
 
+  const history = useHistory();
+
   function Submit(event) {
     event.preventDefault();
-    console.log(username, password);
+    api
+      .post("/login", {
+        username,
+        password
+      })
+      .then(resp => {
+        login(resp.data.token);
+        console.log(resp);
+        history.push("/profiles");
+      })
+      .catch(error => console.log(error));
   }
 
   return (
