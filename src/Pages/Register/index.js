@@ -13,7 +13,7 @@ export default function Register() {
   function Submit(event) {
     event.preventDefault();
     api
-      .post("/perfis", {
+      .post("/perfis/", {
         nome: name,
         email: email,
         senha: password,
@@ -23,7 +23,7 @@ export default function Register() {
         console.log(resp)
         history.push("/");
       })
-      .catch(error => console.log(error));
+      .catch(error => console.error(error));
   }
 
   return (<div className="form">

@@ -14,7 +14,7 @@ export default function Login() {
   function Submit(event) {
     event.preventDefault();
     api
-      .post("/login", {
+      .post("/login/", {
         username,
         password
       })
@@ -23,7 +23,7 @@ export default function Login() {
         console.log(resp);
         history.push("/profiles");
       })
-      .catch(error => console.log(error));
+      .catch(error => console.error(error));
   }
 
   return (
