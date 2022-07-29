@@ -10,7 +10,7 @@ from .serializers import PerfilSerializer, PerfilSimplificadoSerializer, Convite
 
 class PerfilViewSet(viewsets.ModelViewSet):
     queryset = Perfil.objects.all()
-    serializers_class = PerfilSerializer
+    serializer_class = PerfilSerializer
 
     def get_serializers_class(self):
         if self.request.method == 'GET':
