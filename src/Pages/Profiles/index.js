@@ -50,10 +50,10 @@ export default function Profiles() {
   }
   return (
     <>
-      <h1>Seja bem vindo {currentProfile.nome}</h1>
       <div className="wrapper">
         <div className="profiles">
           <div className="invite">
+            <h2>Talvez você conheça</h2>
             {
               profiles?.map(profile =>
                 profile.id === currentProfile?.id ? null : (
@@ -70,7 +70,7 @@ export default function Profiles() {
             }
           </div>
           <div className="invitations">
-            <h2>Convites</h2>
+            <h2>Solicitações</h2>
             {
               invites?.map(invite => (
                 <div className="card-default card" key={invite.inviteId}>
@@ -81,7 +81,7 @@ export default function Profiles() {
             }
           </div>
           <div className="contacts">
-            <h2>Contatos</h2>
+            <h2>Sua rede</h2>
             <ul className="contact">
               {
                 currentProfile?.contatos.map(contact => (

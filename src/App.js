@@ -16,9 +16,6 @@ function App() {
         <nav>
           <img src={imagemLinkedin}></img>
           <ul className='text'>
-            <li className="login">
-              <NavLink to="/">Login</NavLink>
-            </li>
             <li className="logout">
               <button onClick={handleLogout}>Logout</button>
             </li>

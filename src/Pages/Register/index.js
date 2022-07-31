@@ -18,7 +18,7 @@ export default function Register() {
         nome: name,
         email: email,
         senha: password,
-        nome_empreas: companyName
+        nome_empresa: companyName
       })
       .then(resp => {
         console.log(resp)
