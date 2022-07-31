@@ -32,7 +32,18 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+img {
+  width: 150px;
+  display: block;
+  margin-left: 45px;
+  margin-top: 10px;
+  margin-right: 100%;
+  justify-content: left;
+  text-align: left;
 }

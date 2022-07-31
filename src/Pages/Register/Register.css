@@ -1,24 +1,24 @@
-.form {
+.form-registro {
   padding-top: 2rem;
   padding-bottom: 2rem;
   padding-left: 2rem;
   padding-right: 2rem;
   width: 20%;
-  height: 450px;
+  height: 650px;
   margin: auto;
   box-shadow: 0 4px 12px rgb(0 0 0 / 15%);
 }
 
-.form h2 {
+.form-registro h2 {
   text-align: left;
 }
 
-.form form {
+.form-registro form {
   width: 50%;
   margin: auto;
 }
 
-.form input {
+.form-registro input {
   display: block;
   height: 52px;
   width: 250px;
@@ -34,24 +34,24 @@
   border-radius: 4px !important;
 }
 
-.form label {
+.form-registro label {
   margin-top: 1.5rem;
   display: block;
 }
 
-.form input:focus {
+.form-registro input:focus {
   outline: none;
   box-shadow: 0 0 0 1px grey;
 }
 
-.form button {
+.form-registro button {
   display: block;
   appearance: none;
   border: none;
   font-size: 1.1rem;
   width: 275px;
   margin-left: -52px;
-  margin-top: 1rem;
+  margin-top: 2rem;
   height: 50px;
   border-radius: 60px;
   background-color: #0073b1;
@@ -61,31 +61,15 @@
   transition: box-shadow 250ms ease-out;
 }
 
-.form button:focus {
+.form-registro button:focus {
   outline: none;
   box-shadow: 0 0 0 2px teal;
 }
 
-p {
-  margin-top: 20px;
-}
-
-.cadastro {
+.tela-login {
   color: #0073b1;
   cursor: pointer;
   font-weight: 600;
   text-decoration: none;
   transition-duration: 167ms;
-}
-
-a:hover {
-  color: #8344cc;
-}
-
-.login {
-  display: none;
-}
-
-.logout {
-  display: none;
 }

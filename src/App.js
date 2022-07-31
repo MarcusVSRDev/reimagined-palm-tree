@@ -2,6 +2,7 @@ import { NavLink, useHistory } from 'react-router-dom';
 import './App.css';
 import Routes from './routes';
 import { logout } from './Services/utils';
+import imagemLinkedin from './img/logo-linkedin-actuel.jpg'
 
 function App() {
   const history = useHistory();
@@ -13,14 +14,12 @@ function App() {
     <div className='App'>
       <header>
         <nav>
-          <ul>
-            <li>
+          <img src={imagemLinkedin}></img>
+          <ul className='text'>
+            <li className="login">
               <NavLink to="/">Login</NavLink>
             </li>
-            <li>
-              <NavLink to="/registro">Registrar</NavLink>
-            </li>
-            <li>
+            <li className="logout">
               <button onClick={handleLogout}>Logout</button>
             </li>
           </ul>

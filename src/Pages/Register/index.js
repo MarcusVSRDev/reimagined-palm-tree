@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./Register.css";
 import { useHistory } from "react-router-dom";
 import { api } from "../../Services/api";
 
@@ -26,7 +27,7 @@ export default function Register() {
       .catch(error => console.error(error));
   }
 
-  return (<div className="form">
+  return (<div className="form-registro">
     <form onSubmit={Submit}>
 
       <label>
@@ -35,12 +36,12 @@ export default function Register() {
       </label>
 
       <label>
-        Email
+        E-mail
         <input type="text" onChange={(event) => setUseremail(event.target.value)} />
       </label>
 
       <label>
-        Nome da empresa
+        Nome da Empresa
         <input type="text" onChange={(event) => setCompanyName(event.target.value)} />
       </label>
 
@@ -49,8 +50,10 @@ export default function Register() {
         <input type="password" onChange={(event) => setPassword(event.target.value)} />
       </label>
 
-      <button>Registrar</button>
+      <button>Aceite e Cadastre-se</button>
 
     </form>
+
+    <p>Já se cadastrou no LinkedIn? <a href="/" className="tela-login">Entre</a></p>
   </div>);
 }

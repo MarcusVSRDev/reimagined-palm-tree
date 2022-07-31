@@ -28,16 +28,18 @@ export default function Login() {
 
   return (
     <div className="form">
+      <h2>Entrar</h2>
+      <p>Acompanhe as novidades do seu mundo profissional</p>
       <form>
         <label>
-          Username
-          <input type="text" onChange={(event) => setUsername(event.target.value)} />
+          <input type="text" onChange={(event) => setUsername(event.target.value)} placeholder="Email" />
         </label>
         <label>
-          Password
-          <input type="password" onChange={(event) => setPassword(event.target.value)} />
+          <input type="password" onChange={(event) => setPassword(event.target.value)} placeholder="Senha" />
         </label>
-        <button type="submit" onClick={Submit} >Login</button>
+        <button type="submit" onClick={Submit}>Entrar</button>
       </form>
-    </div>);
+      <p>Novo no LinkedIn? <a href="/registro" className="cadastro">Cadastre-se</a></p>
+    </div>
+  );
 }
