@@ -73,3 +73,7 @@
   text-decoration: none;
   transition-duration: 167ms;
 }
+
+.logout {
+  display: none;
+}

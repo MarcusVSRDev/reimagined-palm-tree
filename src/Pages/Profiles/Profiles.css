@@ -50,12 +50,12 @@
 
 .invitations {
   padding: 1rem;
-  background-color: rgba(32, 178, 170, 0.2);
   width: 100%;
   max-width: 25rem;
   margin: auto;
   margin-top: 3.5rem;
   border-radius: 5px;
+  margin-left: -20px;
 }
 
 .invitations li {
@@ -89,12 +89,44 @@
   box-shadow: 0 0 0 2px teal;
 }
 
-.invitations h2 {
-  font-size: 1.1rem;
-  margin-bottom: 1rem;
-}
-
 .invitations h3 {
   font-size: 1rem;
   font-weight: 400;
+}
+
+.maybe {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  margin-top: 15px;
+}
+
+.solicitacoes {
+  font-size: 1.1rem;
+}
+
+.contacts {
+  margin-top: 4rem;
+  width: 250px;
+}
+
+.rede {
+  font-size: 1.1rem;
+  margin-top: 5px;
+}
+
+.logout {
+  display: block;
+  text-align: right;
+  margin-right: 20px;
+  margin-top: -40px;
+}
+
+.logout button {
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  width: 90px;
+  background-color: #FFF;
+  color: #0073b1;
+  box-shadow: 0 0 0 1px #0073b1;
 }

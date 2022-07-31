@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "./Profiles.css";
 import { api } from "../../Services/api";
+import { useHistory } from "react-router-dom";
+import { logout } from '../../Services/utils';
 
 export default function Profiles() {
   const [profiles, setProfiles] = useState();
@@ -48,12 +50,22 @@ export default function Profiles() {
       .then((resp) => console.log(resp))
       .catch((error) => console.error(error));
   }
+  const history = useHistory();
+  function handleLogout() {
+    logout();
+    history.push("/");
+  }
   return (
     <>
+      <ul className='text'>
+        <li className="logout">
+          <button onClick={handleLogout}>Logout</button>
+        </li>
+      </ul>
       <div className="wrapper">
         <div className="profiles">
           <div className="invite">
-            <h2>Talvez você conheça</h2>
+            <h2 className="maybe">Talvez você conheça</h2>
             {
               profiles?.map(profile =>
                 profile.id === currentProfile?.id ? null : (
@@ -70,7 +82,7 @@ export default function Profiles() {
             }
           </div>
           <div className="invitations">
-            <h2>Solicitações</h2>
+            <h2 className="solicitacoes">Solicitações</h2>
             {
               invites?.map(invite => (
                 <div className="card-default card" key={invite.inviteId}>
@@ -81,7 +93,7 @@ export default function Profiles() {
             }
           </div>
           <div className="contacts">
-            <h2>Sua rede</h2>
+            <h2 className="rede">Minha rede</h2>
             <ul className="contact">
               {
                 currentProfile?.contatos.map(contact => (
